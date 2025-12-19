@@ -1,5 +1,6 @@
 <script>
   import Caret from "$lib/blinkingCaret.svelte";
+  import Card from "$lib/Card.svelte";
 </script>
 
 <div class="snap-y snap-mandatory">
@@ -64,6 +65,7 @@
   </section>
 
   <section id="projects" class="min-h-screen container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-medium">Projects</h2>
+    <h2 class="text-5xl font-medium">Projects</h2>
+    <Card title="SAY THEIR NAMES project" img_path="/projects/STN.png" summary="An interactive Leaflet map with filters and time controls to explore incident-level data across the U.S." link="" tools={["React", "Leaflet", "SQL", "Data viz"]}/>
   </section>
 </div>
