@@ -65,7 +65,12 @@
   </section>
 
   <section id="projects" class="min-h-screen container mx-auto px-6 py-16">
-    <h2 class="text-5xl font-medium">Projects</h2>
-    <Card title="SAY THEIR NAMES project" img_path="/projects/STN.png" summary="An interactive Leaflet map with filters and time controls to explore incident-level data across the U.S." link="" tools={["React", "Leaflet", "SQL", "Data viz"]}/>
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-grid">
+        <Card title="SAY THEIR NAMES project" img_path="/projects/STN.png" summary="I built an interactive map with filters and time controls to explore incident-level, police violence data across the U.S." link="" tools={["React", "Leaflet", "SQL"]}/>
+        <Card title="San Francisco Chronicle 2024 Election" img_path="/projects/SFChron.png" summary="I built custom data visualizations and automated data pipelines for the Chronicle's first-ever, entire Bay Area local election coverage." link="https://www.sfchronicle.com/projects/2024/election-results/san-francisco" tools={["Datawrapper", "d3.js", "Pandas", "Python", "geocoding"]}/>
+        <Card title="The Daily Northwestern Annual Poll" img_path="/projects/NUpoll.png" summary="How did Northwestern students feel about the encampment? What are students' life habits? We found out through The Daily's first-ever annual poll." link="https://dailynorthwestern.com/2024/10/23/campus/f24-poll/" tools={["Datawrapper", "Python", "BeautifulSoup"]}/>
+        <Card title="Online Survey and Intervention Chatbot" img_path="/projects/DSI.png" summary="Can you replace door-to-door deep canvassing with a chatbot? I tried to answer this question by building a modular chatbot with randomization, video/image, and AI functionality." link="https://datascience.uchicago.edu/people/kota-suzuki/" tools={["Python", "WhatsApp API", "OpenAI API","PostgreSQL"]}/>
+    </div>
   </section>
 </div>

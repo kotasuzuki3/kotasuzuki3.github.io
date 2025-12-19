@@ -75,3 +75,19 @@ body {
 
   pointer-events: none;
 }
+
+/* Project title description */
+.projects-title {
+	margin-bottom: 24px; 
+  font-size: 4rem;  
+  font-weight: 500;
+}
+
+/* Project grid format */
+.projects-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
+
+

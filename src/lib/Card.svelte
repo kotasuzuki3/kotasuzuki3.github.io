@@ -6,8 +6,13 @@
     export let tools = [];
 </script>
 
-<a href={link} target="_blank" class="card flex-shrink-0 md:w-1/4 bg-white shadow-lg rounded-lg overflow-hidden block hover:bg-gray-100 transition duration-300">
-    <img class="w-full max-h-85" src={img_path} alt="thumbnail for project done">
+<a
+  href={link}
+  target="_blank"
+  rel="noreferrer"
+  class="card bg-white shadow-lg rounded-lg overflow-hidden block hover:bg-gray-100 transition duration-300"
+>
+    <img class="w-full h-48 object-cover" src={img_path} alt={`thumbnail for ${title}`} />
     <div class="p-4">
         <h2 class="text-xl font-semibold mb-2">{title}</h2>
         <p class="text-gray-700 text-sm mb-2">{summary}</p>
