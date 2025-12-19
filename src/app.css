@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* making notebook background*/
+:root {
+  --paper: #ffffff;
+  --blue-line: rgba(59, 130, 246, 0.35); 
+  --red-line: rgba(239, 68, 68, 0.45);   
+  --line-gap: 48px;                    
+  --line-thickness: 2px;                
+  --margin-x: 56px;                      
+  --red-thickness: 3px;                
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 0,
+      transparent var(--margin-x),
+      var(--red-line) var(--margin-x),
+      var(--red-line) calc(var(--margin-x) + var(--red-thickness)),
+      transparent calc(var(--margin-x) + var(--red-thickness))
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--line-gap) - var(--line-thickness)),
+      var(--blue-line) calc(var(--line-gap) - var(--line-thickness)),
+      var(--blue-line) var(--line-gap)
+    );
+
+  background-attachment: fixed;
+}
+
+/* post-it note */
+.post-it {
+  position: relative;             
+  display: inline-block;           
+  background: #ffc;              
+  margin: 30px;
+  padding: 1.4em 1.6em;        
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  transform: rotate(-1deg);
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 60px),
+    calc(100% - 60px) 100%,
+    0 100%
+  );
+}
+
+.post-it::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  border-width: 0 60px 60px 0;
+  border-style: solid;
+
+  border-color: transparent transparent #d6c86a transparent;
+
+  box-shadow:
+    -6px 6px 10px rgba(0, 0, 0, 0.25);
+
+  transform: rotate(2deg);
+  transform-origin: bottom right;
+
+  pointer-events: none;
+}
