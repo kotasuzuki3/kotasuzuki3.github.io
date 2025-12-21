@@ -90,4 +90,9 @@ body {
   grid-template-columns: repeat(3, minmax(150px, 1fr));
 }
 
+/* smooth scrolling implementation */
+html {
+	scroll-behavior: smooth;
+}
+
 
